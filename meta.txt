@@ -1,0 +1,319 @@
+reply
+ - total_count
+ - result_count
+ - alerts of object:
+	- external_id (string)
+	- severity (string)
+	- matching_status (string)
+	- end_match_attempt_ts (string)
+	- local_insert_ts (integer)
+	- bioc_indicator (string)
+	- matching_service_rule_id (integer)
+    - attempt_counter (string)
+    - bioc_category_enum_key (string)
+    - case_id (integer)
+    - is_whitelisted (boolean)
+    - starred (boolean)
+    - deduplicate_tokens (string)
+    - filter_rule_id (string)
+    - mitre_technique_id_and_name (string)
+    - mitre_tactic_id_and_name (string)
+    - agent_version
+    - agent_device_domain (string)
+    - agent_fqdn (string)
+    - agent_os_type (string)
+    - agent_os_sub_type (string)
+    - agent_data_collection_status (string)
+    - mac (string)
+    - agent_is_vdi (string)
+    - event_sub_type (integer)
+    - module_id (string)
+    - association_strength (string)
+    - dst_association_strength (string)
+    - story_id (string)
+    - event_id (string)
+    - event_type (string)
+    - event_timestamp (integer)
+    - actor_process_instance_id (string)
+    - actor_process_image_path (string)
+    - actor_process_image_name (string)
+    - actor_process_command_line (string)
+    - actor_process_signature_status (string)
+    - actor_process_signature_vendor (string)
+    - actor_process_image_sha256 (string)
+    - actor_process_image_md5 (string)
+    - actor_process_causality_id (string)
+    - actor_causality_id (string)
+    - actor_process_os_pid (integer)
+    - actor_thread_thread_id (integer)
+    - causality_actor_process_image_name (string)
+    - causality_actor_process_command_line (string)
+    - causality_actor_process_image_path (string)
+    - causality_actor_process_signature_vendor (string)
+    - causality_actor_process_signature_status (string)
+    - causality_actor_causality_id (string)
+    - causality_actor_process_execution_time (integer)/(string date-time)
+    - causality_actor_process_image_md5 (string)
+    - causality_actor_process_image_sha256 (string)
+    - action_file_path (string)
+    - action_file_name (string)
+    - action_file_md5 (string)
+    - action_file_sha256 (string),
+    - action_file_macro_sha256 (string)
+    - action_registry_data (string)
+    - action_registry_key_name (string)
+    - action_registry_value_name (string)
+    - action_registry_full_key (string)
+    - action_local_ip (string)
+    - action_local_port (string)
+    - action_remote_ip (string)
+    - action_remote_port (string)
+    - action_external_hostname (string)
+    - action_country (string)
+    - action_process_instance_id (string)
+    - action_process_causality_id (string)
+    - action_process_image_name (string)
+    - action_process_image_sha256 (string)
+    - action_process_image_command_line (string)
+    - action_process_signature_status (string)
+    - action_process_signature_vendor (string)
+    - os_actor_effective_username (string)
+    - os_actor_process_instance_id (string)
+    - os_actor_process_image_path (string)
+    - os_actor_process_image_name (string)
+    - os_actor_process_command_line (string)
+    - os_actor_process_signature_status (string)
+    - os_actor_process_signature_vendor (string)
+    - os_actor_process_image_sha256: (string)
+    - os_actor_process_causality_id (string)
+    - os_actor_causality_id (string)
+    - os_actor_process_os_pid (string)
+    - os_actor_thread_thread_id (string)
+    - fw_app_id (string)
+    - fw_interface_from (string)
+    - fw_interface_to (string)
+    - fw_rule (string)
+    - fw_rule_id (string)
+    - fw_device_name (string)
+    - fw_serial_number (string)
+    - fw_url_domain (string)
+    - fw_email_subject (string)
+    - fw_email_sender (string)
+    - fw_email_recipient (string)
+    - fw_app_subcategory (string)
+    - fw_app_category (string)
+    - fw_app_technology (string)
+    - fw_vsys (string),
+    - fw_xff (string)
+    - fw_misc (string)
+    - fw_is_phishing (string)
+    - dst_agent_id (string)
+    - dst_causality_actor_process_execution_time:null,
+    - alert_id:17,
+    - detection_timestamp:1597657881618,
+    - name:Virus,
+    - category:Credential Access,
+    - endpoint_id:b72993d1582a8602,
+    - description:Process action type = execution AND target process name = test.exe,
+    - host_ip:[
+       231.00.000.219,
+       21.000.000.104,
+       88.000.000.190
+    ],
+    - host_name:Lakofru,
+    - source:XDR BIOC,
+    - action:DETECTED,
+    - action_pretty:Detected,
+    - user_name:User_mflx
+
+reply
+ - array of object:
+   - agent_id (string)
+   - agent_status (string)
+   - host_name (string)
+   - agent_type (string)
+   - ip (integer)
+   
+reply
+ - total_count
+ - result_count
+ - violations of object:
+	- hostname (string)
+	- username (string)
+	- ip (string)
+	- timestamp (integer)
+	- violation_id (integer)
+	- type (string)
+	- vendor_id (string)
+	- vendor (string)
+	- product_id (string)
+	- product (string)
+	- serial (string)
+	- endpoint_id (string)
+	
+reply
+ - windows (array of strings)
+ - linux (array of strings)
+ - macos (array of strings)
+ 
+reply
+ - distribution_id (string)
+
+reply
+ - status (string)
+ 
+reply
+ - distribution_url (object)
+ 
+reply
+ - action_id (integer)
+ - status (integer)
+ - endpoints_count (integer)
+ 
+reply
+ - data (object)
+	- 59b7211148c94c39b88b44ffddb66d47
+	
+reply
+ - endpoint_id (string)
+ - file_path (string)
+ - file_hash (string)
+ - status (boolean)
+ 
+reply
+ - result_count
+ - scripts (object)
+	- script_id (integer)
+	- name (string)
+	- description (string)
+	- modification_date (integer)
+	- created_by (string)
+	- is_high_risk (boolean)
+	- windows_supported (boolean)
+	- linux_supported (boolean)
+	- macos_supported (boolean)
+	- script_uid (string)
+
+reply
+ - script_id (integer)
+ - name (string)
+ - description (string)
+ - modification_date (integer)
+ - created_by (string)
+ - is_high_risk (boolean)
+ - windows_supported (boolean)
+ - linux_supported (boolean)
+ - macos_supported (boolean)
+ - script_uid (string)
+ - entry_point (string)
+ - script_input (object)
+   - script name/type (object)
+      - name (string)
+      - type (string)
+   - script friendlyname/type (object)
+      - friendly_name (string)
+      - name (string)
+      - type (string)
+ - script_output_type (string)
+ - script_output_dictionary_definitions (object)
+   - script friendlyname/type (object)/(objectarray)
+      - friendly_name (string)
+      - name (string)
+      - type (string)
+
+reply
+ - general_status (string)
+ - endpoints_pending (integer)
+ - endpoints_canceled (integer)
+ - endpoints_in_progress (integer)
+ - endpoints_timeout (integer)
+ - endpoints_failed (integer)
+ - endpoints_completed_succesfully (integer)
+ - endpoints_pending_abort (integer)
+ - endpoints_aborted (integer)
+ - endpoints_expired (integer)
+
+reply
+ - script_name (string)
+ - script_description (string)
+ - script_parameters (object)
+ - date_created (string)
+ - scope (string)
+ - error_message (string)
+ - results (object)
+   - endpointinfo (object)/(objectarray)
+      - endpoint_name (string)
+      - endpoint_ip_address (object)
+      - endpoint_status (string)
+      - domain (string)
+      - endpoint_id (string)
+      - execution_status (string)
+      - standard_output (string)
+      - retrieved_files (integer)
+      - failed_files (integer)
+      - retention_date (string)
+
+reply
+  - string response
+
+reply 
+ - total_count (integer)
+ - result_count (integer)
+ - data (object)
+   - device information (object)/(objectarray)
+      - TIMESTAMP (float)
+      - RECEIVEDTIME (float)
+      - ENDPOINTID (string)
+      - ENDPOINTNAME (string)
+      - DOMAIN (string)
+      - TRAPSVERSION (string)
+      - CATEGORY (string)
+      - TYPE (string)
+      - SUBTYPE (string)
+      - RESULT (string)
+      - REASON (string)
+      - DESCRIPTION (string)
+   
+reply
+ - total_count (integer)
+ - result_count (integer)
+ - data (object)
+   - audit information (object)/(objectarray)
+      - AUDIT_ID (integer)
+      - AUDIT_OWNER_NAME (string)
+      - AUDIT_OWNER_EMAIL (string)
+      - AUDIT_ASSET_JSON (string)
+      - AUDIT_ASSET_NAMES (string)
+      - AUDIT_HOSTNAME (string)
+      - AUDIT_RESULT (string)
+      - AUDIT_REASON (string)
+      - AUDIT_DESCRIPTION (string)
+      - AUDIT_ENTITY (string)
+      - AUDIT_ENTITY_SUBTYPE (string)
+      - AUDIT_SESSION_ID (string)
+      - AUDIT_CASE_ID (string)
+      - AUDIT_INSERT_TIME (integer)
+
+reply
+ - total_count (integer)
+ - result_count (integer)
+ - incidents (object)
+   - incident_id (integer)
+   - creation_time (integer)
+   - modification_time (integer)
+   - detection_time (string)
+   - status (string)
+   - severity (string)
+   - description (string)
+   - assigned_user_mail (string)
+   - assigned_user_pretty_name (string)
+   - alert_count (integer)
+   - low_severity_alert_count (integer)
+   - med_severity_alert_count (integer)
+   - high_severity_alert_count (integer)
+   - user_count (integer)
+   - host_count (integer)
+   - notes (string)
+   - resolve_comment (string)
+   - manual_severity (string)
+   - manual_description (string)

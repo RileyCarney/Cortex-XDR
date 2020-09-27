@@ -1,0 +1,502 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Cortex XDR
+  description: 'https://docs.paloaltonetworks.com/cortex/cortex-xdr/cortex-xdr-api.html'
+  contact:
+    email: "carneasada.development@gmail.com"
+  license:
+    name: "GNU GENERAL PUBLIC LICENSE"
+    url: "https://www.gnu.org/licenses/gpl-3.0.en.html"
+# Added by API Auto Mocking Plugin
+host: virtserver.swaggerhub.com
+basePath: /RileyCarney/Cortex-XDR/1.0
+schemes:
+ - https
+securityDefinitions:
+  api_key:
+    type: "apiKey"
+    name: "Authorization"
+    in: "header"
+  api_key_id:
+    type: "apiKey"
+    name: "x-xdr-auth-id"
+    in: "header"
+
+definitions:
+#readOnly: and writeOnly: true/false
+#readOnly: Returned by GET, not used in POST/PUT/PATCH
+#writeOnly: Used in POST/PUT/PATCH, not returned by GET
+#use $ref: to reference object schemas
+#  $ref: '#/components/schemas/ContactInfo'
+#make sure to add regex for each posssibly property w/ pattern: or enum: with - "nameofenum" below
+    incident:
+        type: "object"
+        properties:
+          incident_id:
+            type: "integer"
+            format: "int64"
+          creation_time:
+            type: "string"
+            format: "date-time"
+          modification_time:
+            type: "string"
+            format: "date-time"
+          detection_time:
+            type: "string"
+            format: "date-time"
+          status:
+            type: "string"
+          severity:
+            type: "string"
+          description:
+            type: "string"
+          assigned_user_mail:
+            type: "string"
+          assigned_user_pretty_name:
+            type: "string"
+          alert_count:
+            type: "integer"
+            format: "int64"
+          low_severity_alert_count:
+            type: "integer"
+            format: "int64"
+          med_severity_alert_count:
+            type: "integer"
+            format: "int64"
+          high_severity_alert_count:
+            type: "integer"
+            format: "int64"
+          user_count:
+            type: "integer"
+            format: "int64"
+          host_count:
+            type: "integer"
+            format: "int64"
+          notes:
+            type: "string"
+          resolve_comment:
+            type: "string"
+          manual_severity:
+            type: "string"
+          manual_description:
+            type: "string"
+          xdr_url:
+            type: "string"
+            format: "url"
+          starred:
+            type: "boolean"
+          hosts:
+            type: "object"
+          users:
+            type: "object"
+          alert_sources:
+            type: "object"
+          incident_sources:
+            type: "object"
+    total_count:
+      type: "integer"
+      format: "int64"
+    result_count:
+      type: "integer"
+      format: "int64"
+    data:
+      type: "object"
+      properties:
+        action:
+          type: "string"
+        action_pretty:
+          type: "string"
+        actor_process_image_name:
+          type: "string"
+        actor_process_command_line:
+          type: "string"
+        alert_count:
+          type: "integer"
+          format: "int64"
+        alert_id:
+          type: "integer"
+          format: "int64"
+        category:
+          type: "string"
+        detection_timestamp:
+          type: "string"
+          format: "date-time"
+        endpoint_id:
+          type: "string"
+          format: "uuid"
+        event_type:
+          type: "string"
+        description:
+          type: "string"
+        file_name:
+          type: "string"
+        file_sha256:
+          type: "string"
+        file_signature_status:
+          type: "string"
+        file_signature_vendor_name:
+          type: "string"
+        file_wildfire_verdict:
+          type: "string"
+        fw_app_id:
+          type: "string"
+        host_ip:
+          type: "string"
+          format: "ipv4"
+        host_name:
+          type: "string"
+        name:
+          type: "string"
+        network_domain:
+          type: "string"
+        network_remote_ip:
+          type: "string"
+        network_remote_port:
+          type: "integer"
+          format: "int64"
+        network_country:
+          type: "string"
+        source:
+          type: "string"
+          format: "date-time"
+        severity:
+          type: "string"
+        type:
+          type: "string"
+        user_name:
+          type: "string"
+        is_whitelisted:
+          type: "string"
+          enum:
+          - "Yes"
+          - "No"
+        is_manual:
+          type: "boolean"
+        is_malicious:
+          type: "boolean"
+        is_process:
+          type: "boolean"
+        starred:
+          type: "boolean"
+    alert:
+        type: "object"
+          properties:
+            action:
+              type: "string"
+            action_country:
+              type: "string"
+            action_external_hostname:
+              type: "string"
+            action_file_macro_sha256:
+              type: "string"
+            action_file_md5:
+              type: "string"
+            action_file_name:
+              type: "string"
+            action_file_path:
+              type: "string"
+            action_file_sha256:
+              type: "string"
+            action_local_ip:
+              type: "string"
+              format: "ipv4"
+            action_local_port:
+              type: "string"
+            action_pretty:
+              type: "string"
+            action_process_casuality_id:
+              type: "string"
+            action_process_image_command_line:
+              type: "string"
+            action_process_image_name:
+              type: "string"
+            action_process_image_sha256:
+              type: "string"
+            action_process_instance_id:
+              type: "string"
+            action_process_signature_status:
+              type: "string"
+            action_process_signature_vendor:
+              type: "string"
+            action_registry_data:
+              type: "string"
+            action_registry_full_key:
+              type: "string"
+            action_registry_key_name:
+              type: "string"
+            action_registry_value_name:
+              type: "string"
+            action_remote_ip:
+              type: "string"
+            action_remote_port:
+              type: "string"
+            actor_causality_id:
+              type: "string"
+            actor_process_command_line:
+              type: "string"
+            actor_process_image_md5:
+              type: "string"
+            actor_process_image_name:
+              type: "string"
+            actor_process_image_path:
+              type: "string"
+            actor_process_image_sha256:
+              type: "string"
+            actor_process_instance_id:
+              type: "string"
+            actor_process_os_pid:
+              type: "string"
+            actor_process_signature_status:
+              type: "string"
+            actor_process_signature_vendor:
+              type: "string"
+            actor_thread_thread_id:
+              type: "integer"
+              format: "int64"
+            agent_data_collection_status:
+              type: "string"
+            agent_device_domain:
+              type: "string"
+            agent_fqdn:
+              type: "string"
+            agent_is_vdi:
+              type: "string"
+            agent_os_sub_type:
+              type: "string"
+            agent_os_type:
+              type: "string"
+            agent_version:
+              type: "string"
+            alert_id:
+              type: "integer"
+              format: "int64"
+            associatoin_strength:
+              type: "string"
+            attempt_counter:
+              type: "string"
+            bioc_category_enum_key:
+              type: "string"
+            bioc_indicator:
+              type: "string"
+            case_id:
+              type: "integer"
+              format: "int64"
+            category:
+              type: "string"
+            casuality_actor_casuality_id:
+              type: "string"
+            causality_actor_process_command_line:
+              type: "string"
+            causality_actor_process_execution_time:
+              type: "string"
+              format: "date-time"
+            causality_actor_process_image_md5:
+              type: "string"
+            causality_actor_process_image_name:
+              type: "string"
+            causality_actor_process_image_path:
+              type: "string"
+            causality_actor_process_image_sha256:
+              type: "string"
+            causality_actor_process_signature_status:
+              type: "string"
+            causality_actor_process_signature_vendor:
+              type: "string"
+            deduplicate_tokens:
+              type: "string"
+            description:
+              type: "string"
+            detection_timestamp:
+              type: "string"
+              format: "date-time"
+            dst_agent_id:
+              type: "string"
+            dst_association_strength:
+              type: "string"
+            dst_causality_actor_process_execution_time:
+              type: "string"
+            end_match_attempt_ts:
+              type: "string"
+            endpoint_id:
+              type: "string"
+            event_id:
+              type: "string"
+            event_sub_type:
+              type: "integer"
+              format: "int64"
+            event_timestamp:
+              type: "string"
+              format: "date-time"
+            event_type:
+              type: "string"
+            external_id:
+              type: "string"
+            filter_rule_id:
+              type: "string"
+            fw_app_category:
+              type: "string"
+            fw_app_id:
+              type: "string"
+            fw_app_subcategory:
+              type: "string"
+            fw_app_technology:
+              type: "string"
+            fw_device_name:
+              type: "string"
+            fw_email_recipient:
+              type: "string"
+            fw_email_sender:
+              type: "string"
+            fw_email_subject:
+              type: "string"
+            fw_interface_from:
+              type: "string"
+            fw_interface_to:
+              type: "string"
+            fw_is_phishing:
+              type: "string"
+            fw_misc:
+              type: "string"
+            fw_rule:
+              type: "string"
+            fw_rule_id:
+              type: "string"
+            fw_serial_number:
+              type: "string"
+            fw_url_domain:
+              type: "string"
+            fw_vsys:
+              type: "string"
+            fw_xff:
+              type: "string"
+            host_ip:
+              type: "o2bject"
+            host_name:
+              type: "string"
+            is_whitelisted:
+              type: "boolean"
+            local_insert_ts:
+              type: "string"
+            mac:
+              type: "string"
+            matching_service_rule_id:
+              type: "integer"
+              format: "int64"
+            matching_status:
+              type: "string"
+            mitre_tactic_id_and_name:
+              type: "string"
+            mitre_technique_id_and_name:
+              type: "string"
+            module_id:
+              type: "string"
+            name:
+              type: "string"
+            os_actor_causality_id:
+              type: "string"
+            os_actor_effective_username:
+              type: "string"
+            os_actor_process_causality_id:
+              type: "string"
+            os_actor_process_command_line:
+              type: "string"
+            os_actor_process_image_name:
+              type: "string"
+            os_actor_process_image_path:
+              type: "string"
+            os_actor_process_image_sha256:
+              type: "string"
+            os_actor_process_instance_id:
+              type: "string"
+            os_actor_process_os_pid:
+              type: "string"
+            os_actor_process_signature_status:
+              type: "string"
+            os_actor_process_signature_vendor:
+              type: "string"
+            os_actor_thread_thread_id:
+              type: "string"
+            severity:
+              type: "string"
+            source:
+              type: "string"
+            starred:
+              type: "boolean"
+            story_id:
+              type: "string"
+            user_name:
+              type: "string"
+    alerts:
+      type: "object"
+      properties:
+        total_count:
+          $ref: "#/definitions/total_count"
+        result_count:
+          $ref: "#/definitions/result_count"
+        data:
+          $ref: "#/definitions/data"
+          
+        
+    network_artifacts:
+      type: "object"
+      properties:
+        total_count:
+          $ref: "#/definitions/total_count"
+        data:
+          $ref: "#/definitions/data"
+    file_artifacts:
+      type: "object"
+      properties:
+        total_count:
+          $ref: "#/definitions/total_count"
+        data:
+          $ref: "#/definitions/data"
+    reply:
+      type: "object"
+      properties:
+        incident:
+          $ref: "#/definitions/incident"
+        alerts:
+          $ref: "#/definitions/alerts"
+        network_artifacts:
+          $ref: "#/definitions/network_artifacts"
+        file_artifacts:
+          $ref: "#/definitions/file_artifacts"
+
+    network_artifact:
+      type: "object"
+      properties:
+          
+tags:
+- name: "incidents"
+  description: "Manage Cortex XDR Incidents"
+  externalDocs:
+    description: "Cortex XDR Incidents API Documentation"
+    url: "https://rb.gy/uvtdhz"
+- name: "endpoints"
+  description: "Manage Cortex XDR Endpoints"
+  externalDocs:
+    description: "Cortex XDR Endpoint API Documentation"
+    url: "https://rb.gy/suvr8y"
+- name: "responses"
+  description: "Manage Cortex XDR Responses"
+  externalDocs:
+    description: "Cortex XDR Responses API Documentation"
+    url: "https://rb.gy/teb5ps"
+- name: "scripts"
+  description: "Manage Cortex XDR Scripts"
+  externalDocs:
+    description: "Cortex XDR Scripts API Documentation"
+    url: "https://rb.gy/p7ccak"
+- name: "rules"
+  description: "Manage Cortex XDR Rules"
+  externalDocs:
+    description: "Cortex XDR Rules API Documentation"
+    url: "https://rb.gy/e59ptp"
+- name: "audits"
+  description: "Manage Cortex XDR Audits"
+  externalDocs:
+    description: "Cortex XDR Audits API Documentation"
+    url: "https://rb.gy/ntecla"
+paths: {}
